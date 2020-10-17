@@ -1,0 +1,14 @@
+{
+  "name": "smart_shopping_cart",
+  "version": "1.0.0",
+  "description": "A smart shopping cart that allows customers to checkout at the cart itself",
+  "main": "index.js",
+  "repository": "https://github.com/asadrajput2/smart-shopping-cart.git",
+  "author": "Asad Ali <asadrajput2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
