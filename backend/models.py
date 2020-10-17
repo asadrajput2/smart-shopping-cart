@@ -31,7 +31,7 @@ class Scan(models.Model):
         db_table = "Scan"
 
     def __str__(self):
-        return self.user.username + " " + str(self.created_at)
+        return self.user.email + " " + str(self.created_at)
 
 
 class Order(models.Model):
@@ -52,7 +52,8 @@ class Order(models.Model):
         db_table = "Order"
 
     def __str__(self):
-        return self.user.username + " " + str(self.created_at)
+        return self.user.email + " " + str(self.created_at)
+
 
 class ScannedItem(models.Model):
 
@@ -64,4 +65,17 @@ class ScannedItem(models.Model):
         db_table = "ScannedItem"
 
     def __str__(self):
-        return self.scan.user.username + " " + self.product.name
+        return self.scan.user.email + " " + self.product.name
+
+
+class OrderedItem(models.Model):
+
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "OrderedItem"
+
+    def __str__(self):
+        return self.order.user.email + " " + self.product.name
