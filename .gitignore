@@ -14,3 +14,5 @@ node_modules
 
 # local api test files
 *.http
+
+tasks.md

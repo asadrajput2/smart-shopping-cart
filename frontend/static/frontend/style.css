@@ -1,3 +1,16 @@
 #root {
-    background-color: rebeccapurple;
+    background-color: #dedede;
+    padding: 2em;
+    margin: 0;
+}
+
+.nav {
+    background-color: #ddd;
+    margin: 1em;
+}
+
+.nav-link {
+    color: #3b5998;
+    padding: 1em;
+    text-decoration: none;
 }
