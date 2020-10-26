@@ -1,5 +1,16 @@
+# python environment
 env
+
 db.sqlite3
 __pycache__/
+
+# local environment file containing environment variables
 .env
+
+# node modules
 node_modules
+
+.vscode
+
+# local api test files
+*.http
