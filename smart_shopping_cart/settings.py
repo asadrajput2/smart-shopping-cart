@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Third party apps
     'django_currentuser',
     'rest_framework',
+    'drf_yasg',
 
     # Local custom apps
     'authentication',
