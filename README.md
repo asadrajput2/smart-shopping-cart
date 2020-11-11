@@ -1,11 +1,12 @@
-# This repository only holds the backend of the app.
-This backend will serve the APIs to both mobile and web frontends
+App for smart shopping cart. This cart allows customers to make payment on the cart itself, saving their as well as the store's time. The cart contains a RaspberryPi with a touch screen, weight sensor, bar code reader and camera(s). Customers can see the items along with the price, amount bought and total on the display, after scanning. They can choose to pay at any time by clicking the "Checkout" button on the display. The weight sensors and cameras help prevent theft and fraud. One camera keeps looking in the cart and uses Machine Learning to make sure there is no unscanned item in the cart. 
 
-To use the server:
+Customers can see their purchase history at any time on the site/app.
 
-***Python 3.8.5+ is required***
-***Node 12.16.3+ is required***
+**Tech Stack**: React, Redux, Django, Tensorflow, Raspberry Pi 3
 
+To use the app:
+
+***Python 3.8.5+ . Node 12.16.3+***
 
 1. Download the code
 
