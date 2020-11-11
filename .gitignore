@@ -16,3 +16,6 @@ node_modules
 *.http
 
 tasks.md
+
+# log files
+*.log
