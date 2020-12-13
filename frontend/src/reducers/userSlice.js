@@ -45,6 +45,7 @@ const userSlice = createSlice({
         },
         [loginUser.fulfilled]: (state) => {
             state.loading = false;
+            window.location.href = '/';
             // Saving to localStorage is being done by the middleware
         },
 
@@ -59,6 +60,7 @@ const userSlice = createSlice({
         [createUser.fulfilled]: (state, action) => {
             state.loading = false;
             state.user = action.payload;
+            window.location.href = '/';
             // Saving tokens to localStorage is being done by the middleware
         }
     }

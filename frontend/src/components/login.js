@@ -30,30 +30,48 @@ function UnconnectedLogin(props) {
 
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    id="email"
-                    value={state.email}
-                    onChange={handleOnChange}
-                />
-                <input
-                    type="password"
-                    id="password"
-                    value={state.password}
-                    onChange={handleOnChange}
-                />
-                <input
-                    type="submit"
-                    value="Login"
-                />
-            </form>
-        </div>
+        <div className="col d-flex justify-content-center align-center">
+            <div className="card border-0">
+                <div className="card-body">
+                    <p className="card-text align -center">Login to start shopping</p>
+
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <input
+                                    type="text"
+                                    id="email"
+                                    value={state.email}
+                                    onChange={handleOnChange}
+                                    className="form-control"
+                                    placeholder="Email"
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    value={state.password}
+                                    onChange={handleOnChange}
+                                    className="form-control"
+                                    placeholder="Password"
+                                />
+                            </div>
+
+                            <input
+                                className="btn btn-block btn-success"
+                                type="submit"
+                                value="Login"
+                            />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
     )
 
 }
 
-const Login = connect(null, { loginUser })(UnconnectedLogin);
+const Login = connect(null, { loginUser})(UnconnectedLogin);
 
 export default Login;

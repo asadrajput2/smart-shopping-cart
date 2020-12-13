@@ -4,17 +4,19 @@ from django_currentuser.db.models import CurrentUserField
 
 class Product(models.Model):
 
+    barcode_id = models.IntegerField()
     name = models.CharField(max_length=250, null=True, blank=True)
     manufacturer = models.CharField(max_length=250, null=True, blank=True)
     weight = models.FloatField(null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+
     class Meta:
         db_table = "Product"
 
     def __str__(self):
-        return self.name + " " + self.manufacturer
+        return self.name + " " + str(self.barcode_id)
 
 
 class Order(models.Model):
@@ -43,7 +45,7 @@ class Order(models.Model):
         db_table = "Order"
 
     def __str__(self):
-        return self.user.email + " " + str(self.created_at)
+        return self.name + " " + str(self.created_at)
 
 
 class Item(models.Model):

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -157,3 +158,11 @@ STATIC_URL = '/static/'
 
 
 AUTH_USER_MODEL = 'authentication.CustomUser'
+
+
+ASGI_APPLICATION = 'smart_shopping_cart.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
